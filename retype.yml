@@ -1,5 +1,5 @@
 input: .
-output: .retype
+output: retype
 url: # Add your website address here
 branding:
   title: Simple Inventory System
