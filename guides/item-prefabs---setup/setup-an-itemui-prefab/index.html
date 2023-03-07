@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731463344755">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731470366882">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Setting Up Items</title>
-    <meta name="title" content="Setting Up Items">
-    <meta name="description" content="This section describes creating prefabs with the ItemUI component." />
+    <title>Setup an ItemUI Prefab</title>
+    <meta name="title" content="Setup an ItemUI Prefab">
+    <meta name="description" content="This section describes setting up the ItemUI Prefabs created in the previous section." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/guides/setup---item-prefabs/" />
+    <link rel="canonical" href="/guides/item-prefabs---setup/setup-an-itemui-prefab/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/guides/setup---item-prefabs/">
-    <meta property="og:title" content="Setting Up Items">
-    <meta property="og:description" content="This section describes creating prefabs with the ItemUI component.">
+    <meta property="og:url" content="/guides/item-prefabs---setup/setup-an-itemui-prefab/">
+    <meta property="og:title" content="Setup an ItemUI Prefab">
+    <meta property="og:description" content="This section describes setting up the ItemUI Prefabs created in the previous section.">
+    <meta property="og:image" content="/static/image14.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/guides/setup---item-prefabs/">
-    <meta property="twitter:title" content="Setting Up Items">
-    <meta property="twitter:description" content="This section describes creating prefabs with the ItemUI component.">
+    <meta property="twitter:url" content="/guides/item-prefabs---setup/setup-an-itemui-prefab/">
+    <meta property="twitter:title" content="Setup an ItemUI Prefab">
+    <meta property="twitter:description" content="This section describes setting up the ItemUI Prefabs created in the previous section.">
+    <meta property="twitter:image" content="/static/image14.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.731463344755" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.731470366882" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.731463344755" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.731463344755" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.731470366882" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.731470366882" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +51,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Simple Inventory System</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -152,248 +154,15 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="setting-up-items" class="break-words">
+<doc-anchor-target id="setup-an-itemui-prefab" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-up-items">#</doc-anchor-trigger>
-        <span>Setting Up Items</span>
-    </h1>
-</doc-anchor-target>
-<doc-anchor-target id="creating-an-itemui-prefab">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-an-itemui-prefab">#</doc-anchor-trigger>
-        <span>Creating an ItemUI Prefab</span>
-    </h2>
-</doc-anchor-target>
-<p>This section describes creating prefabs with the ItemUI component. The ItemUI Component is necessary for handling user interaction with the inventory system.</p>
-<doc-anchor-target id="quick-creation">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quick-creation">#</doc-anchor-trigger>
-        <span>Quick Creation</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li><p>Duplicate TEMPLATE_ItemUI in the folder SimpleInventorySystem/Prefabs/ItemUI</p>
-</li>
-<li><p>Rename the newly duplicated Prefab</p>
-</li>
-</ol>
-<p>You may skip this section and proceed to Setup ItemUI Prefab if you duplicated the template and renamed the Prefab.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_6e8828a9f60fdfba.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<doc-anchor-target id="manual-creation">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#manual-creation">#</doc-anchor-trigger>
-        <span>Manual Creation</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li>Create a new empty GameObject in the scene and attach an Image Component.</li>
-</ol>
-<p><img src="rackmultipart20230306-1-qkwvwt_html_d0a6791b5967ceac.png" alt="" /> <img src="rackmultipart20230306-1-qkwvwt_html_d5aac59ba30ba143.png" alt="" /></p>
-<ol start="2">
-<li>Next, drag and drop the newly created GameObject into a prefabs folder in the Project window. In this example, the GameObject Sample ItemUI will be placed in the folder SimpleInventorySystem/Prefabs/ItemUI</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_449d2aa18ebe1dfd.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="3">
-<li><p>You may delete the GameObject in the Scene now that there is a Prefab for it.</p>
-</li>
-<li><p>Rename the Prefab to whatever your item&#x27;s name will be.To differentiate it from the prefab containing the model that we will create later, you can include the word UI in the name.</p>
-</li>
-</ol>
-<p>i.e. Potion_UI, Backpack_UI, Rifle_UI, etc.</p>
-<ol start="5">
-<li><p>Open the Prefab by double clicking the Prefab or by Right Clicking the Prefab and choosing the Open option.</p>
-</li>
-<li><p>Change the Image&#x27;s transparency to 0. You may save this step for later if you would like to reference the overall image size during the setup phase. <img src="rackmultipart20230306-1-qkwvwt_html_498e281080801018.png" alt="" /></p>
-</li>
-<li><p>Modify the Rect Transform&#x27;s values with the following:</p>
-</li>
-</ol>
-<ul>
-<li>Pos X: 0</li>
-<li>Pos Y: 0</li>
-<li>Pos Z: 0</li>
-<li>Anchors
-<ul>
-<li>Min
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-<li>Max
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Pivot
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-</ul>
-<p>Modifying the Width and Height depends on the size that the Item UI will take up in the grid system. For now, set Width and Height to 75.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_9bddd3aebcaee61f.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="8">
-<li>Add an ItemUI Component</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_97e2580e52cc4130.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="9">
-<li>Drag and drop an Empty Grid of your item&#x27;s desired size under the Item UI Prefab. The Empty Grid Prefabs can be found in the folder SimpleInventorySystem/Prefabs/UI Elements/Empty Grid</li>
-</ol>
-<p>If there is no empty grid that matches your size, please see the section Creating an Empty Grid.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_22ee08e862523ed3.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="10">
-<li>Drag and drop a Backdrop prefab under the ItemUI Prefab. The ItemUI Prefab should contain 2 children at this point, the Empty Grid Prefab and the Backdrop Prefab. The Backdrop Prefab can be found in the folder SimpleInventorySystem/Prefabs/UI Elements</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_75a57a49623dbae.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>The following instructions are necessary steps for creating stackable items. If your items are not meant to be stackable, then steps 11-14 can be skipped. These steps also assume the user has the TextMeshPro package installed in their project.</p>
-<ol start="11">
-<li>Add a new Game Object under the ItemUI Prefab. ItemUI Prefab should now have 3 children. The new Game Object should contain an attached Text Component. One way to do this is to right click the ItemUI Prefab and choose the option UI &gt; Text - Text Mesh Pro</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_f609d9e2b8cfeefe.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="12">
-<li><p>Rename the text&#x27;s Game Object to &quot;Stack Count&quot; for clarity&#x27;s sake.</p>
-</li>
-<li><p>Modify the Rect Transform of Stack Count</p>
-</li>
-</ol>
-<ul>
-<li>Pivot
-<ul>
-<li>X: 1</li>
-<li>Y: 0</li>
-</ul>
-</li>
-<li>Anchors
-<ul>
-<li>Min
-<ul>
-<li>X: 0</li>
-<li>Y: 0</li>
-</ul>
-</li>
-<li>Max
-<ul>
-<li>X: 1</li>
-<li>Y: 0</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Left: 0</li>
-<li>Pos Y: 0</li>
-<li>Pos Z: 0</li>
-<li>Right: 0</li>
-<li>Height: 50 (could be any number)</li>
-</ul>
-<p>It should look like the following image.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_f1effa4c0acdb3f1.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="14">
-<li>Modify the TextMeshPro - Text (UI) component</li>
-</ol>
-<ul>
-<li>Text Input</li>
-</ul>
-<p>Change the text field to a number. Try 0.</p>
-<ul>
-<li>Font Size</li>
-</ul>
-<p>Change the size to whatever number to fit the text. We are using size 12.</p>
-<ul>
-<li>Alignment</li>
-</ul>
-<p>The alignment should be Right aligned and Bottom aligned. Clicking the third buttons of the top and bottom row should do the trick.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_9abb3b06b39018b2.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="15">
-<li><p>Add a GameObject with an attached Image component under the ItemPrefab. The ItemUI Prefab should contain 3 children, or 4 if the Stack Count text was added from the last steps.</p>
-</li>
-<li><p>Modify the RectTransform component of the Image GameObject.</p>
-</li>
-</ol>
-<ul>
-<li>PosX: 0</li>
-<li>PosY: 0</li>
-<li>PosZ: 0</li>
-<li>Width: 75</li>
-<li>Height: 75</li>
-<li>Anchors
-<ul>
-<li>Min
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-<li>Max
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-<li>Pivot
-<ul>
-<li>X: 0</li>
-<li>Y: 1</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_2a9586c2349ad94e.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>With this section complete, we will continue with setting up the Item UI.</p>
-<doc-anchor-target id="setup-an-itemui-prefab">
-    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#setup-an-itemui-prefab">#</doc-anchor-trigger>
         <span>Setup an ItemUI Prefab</span>
-    </h2>
+    </h1>
 </doc-anchor-target>
 <p>This section describes setting up the ItemUI Prefabs created in the previous section. This tutorial assumes all the necessary GameObjects and components have been added to the Item UI Prefab and that the user has the necessary data and images required to complete the Prefab.</p>
 <p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_720d576e6dbe3cdc.png" alt="" />
+    <img src="../../../static/image14.png" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -405,7 +174,9 @@
 </li>
 </ol>
 <p>There are three sections for this.</p>
-<p>2a. Item Attributes</p>
+<doc-panels>
+   <doc-panel id="2a-item-attributes">
+       <template #title>2a. Item Attributes</template>
 <ul>
 <li>Set the Item Name</li>
 <li>Drag and drop the Image child GameObjectinto the Image field</li>
@@ -415,44 +186,124 @@
 <li>Width is the space an item will take up in a Grid system. Recommend setting to 1 if unknown. Otherwise, put the value in units of 1 cell. I.e. if an item is meant to take up 2 cells in width, then assign 2 as the value.</li>
 <li>Height, similar width, except vertically inclined.</li>
 </ul>
-<p>2b. Container Prefab</p>
+   </doc-panel>
+   <doc-panel id="2b-container-prefab">
+       <template #title>2b. Container Prefab</template>
 <ul>
-<li>ContainerUI Prefab refers to the storage capacity of the prefab. I.e. a backpack, a pouch, or some other container. We will discuss the creation of this at a later section. For now, it can be left blank if the item is a generic item OR drag and drop a Backpack or Pouch cells prefab from the folder SimpleInventorySystem/Prefabs/UI Elements/Cells</li>
+<li>ContainerUI Prefab refers to the storage capacity of the prefab. I.e. a backpack, a pouch, or some other container. We will discuss the creation of this at a later section. For now, it can be left blank if the item is a generic item OR drag and drop a Backpack or Pouch cells prefab from the folder <span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-6 px-2 text-xs rounded-md" style="margin: 0px 8px 0px 0px;">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><symbol id="file-directory-open-fill-icon-symbol" viewBox="0 0 16 16"><path d="M.513 1.513A1.75 1.75 0 011.75 1h3.5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 00.2.1H13a1 1 0 011 1v.5H2.75a.75.75 0 000 1.5h11.978a1 1 0 01.994 1.117L15 13.25A1.75 1.75 0 0113.25 15H1.75A1.75 1.75 0 010 13.25V2.75c0-.464.184-.91.513-1.237z"/></symbol><use xlink:href="#file-directory-open-fill-icon-symbol" /></g></svg></span>
+    <span>SimpleInventorySystem/Prefabs/UI Elements/Cells</span>
+</span></li>
 </ul>
-<p>2c. Required Component Links</p>
+   </doc-panel>
+   <doc-panel id="2c-required-component-links">
+       <template #title>2c. Required Component Links</template>
 <p>Simply drag and drop the child GameObjects of the ItemUI Prefab.</p>
 <ul>
 <li>Backdrop Image</li>
 <li>Empty Grid Container</li>
 </ul>
+   </doc-panel>
+</doc-panels>
 <ol start="3">
 <li>Modify the Rect Transform of the ItemUI Prefab</li>
 </ol>
 <p>All the values should still be the same from the previous section. The only changes that will be made are to Width and Height.</p>
-<p>Width should be the desired pixel size of each cell in the Grid system multiplied by the ItemUI component&#x27;s Width. So if our system is using 75 pixels, then multiply that with the ItemUI&#x27;s component&#x27;s Width value.</p>
-<p>i.e.Width = 75 * 2 = 150</p>
+<p>Width should be the desired pixel size of each cell in the Grid system multiplied by the ItemUI component&#x27;s Width.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>If our system is using 75 pixels and the ItemUI&#x27;s component&#x27;s Width value is 2, then
+the ItemUI Prefab&#x27;s Width = 75 * 2 = 150</p>
+        </div>
+    </div>
+</div>
 <p>The same goes for the Height value.</p>
 <p>The image below assumes the width and height of the ItemUI component are 2x2. And shows a complete ItemUI component.</p>
 <p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_76816956b9a801b8.png" alt="" />
+    <img src="../../../static/image17.png" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
 <ol start="4">
 <li>If an empty grid with the correct dimensions was previously placed, then this step and substeps can be skipped. Proceed to Step 5.</li>
 </ol>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
 <p>In our example, I decided to change the dimensions of the ItemUI Prefab to 2x2. Therefore, I will need to manually change the GameObject as well.</p>
+        </div>
+    </div>
+</div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
 <p>These following substeps assume we are modifying a ItemUI with a cell size of 2x2 and a grid system with each cell being 75x75 pixels.</p>
+        </div>
+    </div>
+</div>
 <p>4a. Right click the Empty Grid GameObject and choose the option Unpack Prefab Completely. This assures us that we will not be modifying the source Prefab, or allow this GameObject to be updated by any changes made to the source Prefab.</p>
 <p>4b. Modify the Rect Transform Component</p>
-<ul>
-<li>Width: 150</li>
-<li>Height: 150</li>
-</ul>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(1, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>Rect</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>axis</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>150</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</div>
 <p>4c. Duplicate the Image child GameObject under the Empty Grid GameObject. We will need to do this 3 times, to make a total of 4 child GameObjects.</p>
 <p>If done correctly, the cells should be nicely fit inside the ItemUI Prefab. Compare to the image before with the following image.</p>
 <p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_a73332bdc4dd3e81.png" alt="" />
+    <img src="../../../static/image23.png" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -462,100 +313,49 @@
 <li>Modify the Rect Transform of the Image GameObject under the ItemUI Prefab</li>
 </ol>
 <p>Similar to the ItemUI Prefab, the Width and Height should correspond to the dimensions of a cell and the units of the ItemUI Prefab.</p>
-<p>I.e. In my example, my item is 2x2, therefore the width and height should be 150</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>In our example, the item is 2x2, therefore the width and height should be 150</p>
+        </div>
+    </div>
+</div>
 <ol start="6">
 <li>Modify the Image Component of the Image GameObject under the ItemUI Prefab</li>
 </ol>
 <p>Change the Source Image attribute to whatever you want for your Item.</p>
-<p>I.e. In my example, I will be using a placeholder icon.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>In the example, we will be using a placeholder icon.</p>
+        </div>
+    </div>
+</div>
 <p>After the steps are completed, the ItemUI should be finished and look similar to the image below.</p>
 <p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_b93a24b14f9d2dcd.png" alt="" />
+    <img src="../../../static/image22.png" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="creating-an-item-prefab">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-an-item-prefab">#</doc-anchor-trigger>
-        <span>Creating an Item Prefab</span>
-    </h2>
-</doc-anchor-target>
-<p>This section describes creating an Item. The Item is interactable in the game world that will include an ItemUI Prefab as its child.</p>
-<ol>
-<li>Create the Prefab with a model. If the prefab is already created, skip this step. Otherwise, drag and drop a model onto the Scene View. Then drag and drop it from the Scene Hierarchy into the Project Window to create a prefab.</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_6d6781adcab274e.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="2">
-<li>Open the newly created Item Prefab</li>
-</ol>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_8d38b36be1cfcc77.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="3">
-<li>Drag and drop the PickUp Prefab under the Item Prefab.The Item Prefab should now contain 1 child GameObject. The PickUp Prefab can be found in the folder SimpleInventorySystem/Prefabs</li>
-</ol>
-<p>If done correctly, you should see 2 Sphere Colliders. One larger collider encompassing the other smaller collider.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_c39748c9db5ecbd4.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_9ac8e676ce7ed1bb.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="4">
-<li>Drag and drop the respective ItemUI Prefab under the Item Prefab.The Item Prefab should now contain 2 children GameObjects</li>
-</ol>
-<p>In this example, I will be using the 2x2 ItemUI that I created earlier.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_cd151be5e7cbc25b.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<ol start="5">
-<li>Modify the PickUp Component under the PickUp GameObject</li>
-</ol>
-<p>The component has 3 sections</p>
-<p>5a. Pickup Attributes</p>
-<ul>
-<li>Drag and drop the ItemUI child GameObject to the ItemUI attribute.</li>
-<li>The PickUp Range attribute has already been completed. If the user has another collider they want to connect, then they may replace that value.</li>
-</ul>
-<p>5b. Item Game Object Attributes</p>
-<p>These refer to the GameObject holding the ItemUI Prefab or the Rigid Body component. In most cases, it will be the Item Prefab in question. Ensure that the Item Prefab has a RigidBody.</p>
-<ul>
-<li>Drag and Drop the Item Prefab to the Item Game Object attribute.</li>
-<li>Drag and Drop the Item Prefab with a Rigid Body to the Item Rigid Body attribute.</li>
-</ul>
-<p>5c. Item Game Object Transform Modifications</p>
-<p>Sometimes an item carried on a person will be smaller or larger than how its being represented on the screen. It may have a certain rotation or position on the person&#x27;s body. Assign the values here to alter how an item is positioned, rotated, or scaled on a character. This section will not go in-depth with setting this up since its use case is too specific.</p>
-<ul>
-<li>Alter Position: Changes where the item is positioned in respect to where it will be parented once equipped.</li>
-<li>Alter Rotation: Changes how the item is rotated in respect to where it will be parented once equipped.</li>
-<li>Changes the scale of an item in respect to where it will be parented once equipped.</li>
-</ul>
-<ol start="6">
-<li><p>A Sphere Collider should be attached to the Pickup GameObject. You can change the radius to increase its detection by a RayCast. Ensure that Is Trigger is checked.</p>
-</li>
-<li><p>The PickUpRange GameObject should be a child of the PickUp GameObject</p>
-</li>
-</ol>
-<p>7a. The PickUpRange GameObject should simply have a Pick Up Range Component attached.</p>
-<p>7b. A Sphere Collider should be attached to the Pickup Range GameObject. During gameplay, a GameObject with the Player_IS Component will check for collisions with GameObjects containing the PickUp Range Component. Decrease the radius to shrink the distance required for a player to be within pick. If the Player_IS is not colliding with the PickUpRange, then the item will not be picked up. Ensure that Is Trigger is checked.</p>
-<p><figure class="content-center">
-    <img src="rackmultipart20230306-1-qkwvwt_html_b86531a9f16a4c76.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>If done successfully,the PickUp Prefab should look like the above image and the PickUp component should be filled out as such.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -565,16 +365,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../guides/item-prefabs---setup/creating-an-itemui-prefab/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Welcome</span>
+                                                <span class="block mt-1">Create an Item​UI Prefab</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../guides/item-prefabs---setup/create-an-item-prefab/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Create an Item Prefab</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -615,6 +422,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Setting Up Items", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Setup an ItemUI Prefab", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
